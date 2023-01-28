@@ -16,7 +16,6 @@ useHead({
   <section class="py-10">
     <div class="container mx-auto">
       <div class="flex flex-wrap gap-5">
-
         <NuxtLink
           v-for="category in categories"
           :key="category.id.id"
