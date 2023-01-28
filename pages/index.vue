@@ -15,7 +15,7 @@
 
   // Call API use fetch
   const {data:posts,refresh,error} = await useWpApi().getPosts()
-
+  
 </script>
 
 <template>

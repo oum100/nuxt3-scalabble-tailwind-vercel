@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-
+import colorGenerator from "~/utils/colorGenerator";
 const {data: categories} = await useWpApi().getCategories()
 useHead({
   title: "Categories",
@@ -21,9 +21,10 @@ useHead({
           :key="category.id.id"
           :to="`/categories/${category.slug}`"
           
-          class="flex items-center justify-center py-2 px-4 rounded text-white shadow-md hover:shadow-lg duration-200 text-2xl uppercase bg-blue-600">
+          class="flex items-center justify-center py-2 px-4 rounded text-white shadow-md hover:shadow-lg duration-200 text-2xl uppercase" :style="{'background-color': colorGenerator()}" >
           <span class="font-semibold">#{{ category.name }}</span>
       </NuxtLink>
+      
       </div>
     </div>
     
